@@ -83,7 +83,7 @@ th,td {
    var personData; // data to be retrieved from the json file
    var recordsPerPage; // user input of hwo many records to display per page
    var totalRecords; // length of the data object
-   $.getJSON('persons.json', function(data) {
+   $.getJSON('https://jsonplaceholder.typicode.com/photos', function(data) {
      personData = data;
      totalRecords = personData.length;
    });
@@ -99,9 +99,9 @@ th,td {
      var html = "";
      for(var i = 0; i < pageWisePersonData.length; i++){
         html += "<tr>";
-        html +="<td>" +  pageWisePersonData[i].name + "</td>";
-        html +="<td>" +  pageWisePersonData[i].gender + "</td>";
-        html += "<td>" + pageWisePersonData[i].age + "</td>";
+        html +="<td>" +  pageWisePersonData[i].title + "</td>";
+        html +="<td>" +  pageWisePersonData[i].url + "</td>";
+        html += "<td><img src='" + pageWisePersonData[i].thumbnailUrl + "'/></td>";
         html += "</tr>";
      }
      $('#personTabBody').html(html);
