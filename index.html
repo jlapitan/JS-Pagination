@@ -100,7 +100,7 @@ th,td {
      for(var i = 0; i < pageWisePersonData.length; i++){
         html += "<tr>";
         html +="<td>" +  pageWisePersonData[i].title + "</td>";
-        html +="<td>" +  pageWisePersonData[i].url + "</td>";
+        html +="<td><a target='_blank' href='" +  pageWisePersonData[i].url + "'>"+pageWisePersonData[i].url+"</td>";
         html += "<td><img width='150' height='150' src='" + pageWisePersonData[i].thumbnailUrl + "'/></td>";
         html += "</tr>";
      }
